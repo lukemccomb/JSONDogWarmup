@@ -46,32 +46,23 @@ $(document).ready(function () {
   };
 
   var addDogs = function() {
-    for (i = 0; i < gschoolDogs['dogs'].length; i++) {
-      var owner = gschoolDogs['dogs'][i]['owner'];
-      var name = gschoolDogs['dogs'][i]['name'];
-      var food = gschoolDogs['dogs'][i]['preferences'][0]['favoriteFood'];
-      var toy = gschoolDogs['dogs'][i]['preferences'][1]['favoriteToy'];
-      $('.dogs').append("<tr>" + "<td>" + owner + "</td>"
-        + "<td>" + name + "</td>" +
-        "<td>" + food + "</td>" +
-        "<td>" + toy + "</td>" + "</tr>")
+    var gschoolDog = gschoolDogs['dogs'];
+
+    for (i = 0; i < gschoolDog.length; i++) {
+      var owner = gschoolDog[i]['owner'];
+      var name = gschoolDog[i]['name'];
+      var food = gschoolDog[i]['preferences'][0]['favoriteFood'];
+      var toy = gschoolDog[i]['preferences'][1]['favoriteToy'];
+      $('.dogs').append("<tr>" +
+                        "<td>" + owner + "</td>" +
+                        "<td>" + name + "</td>" +
+                        "<td>" + food + "</td>" +
+                        "<td>" + toy + "</td>" +
+                        "</tr>")
     }
   };
 
-
-
   addDogs();
-
-//  $('.dogs').append("<tr>" + "<td>" + gschoolDogs['dogs'][0]['owner'] + "</td>"
-//      + "<td>" + gschoolDogs['dogs'][0]['name'] + "</td>" + "<td>" + gschoolDogs['dogs'][0]['preferences'][0]['favoriteFood'] + "</td>" +
-//      "<td>" + gschoolDogs['dogs'][0]['preferences'][1]['favoriteToy'] + "</td>" + "</tr>" +
-//      "<tr>" + "<td>" + gschoolDogs['dogs'][1]['owner'] + "</td>"
-//      + "<td>" + gschoolDogs['dogs'][1]['name'] + "</td>" + "<td>" + gschoolDogs['dogs'][1]['preferences'][0]['favoriteFood'] + "</td>" +
-//      "<td>" + gschoolDogs['dogs'][1]['preferences'][1]['favoriteToy'] + "</td>" + "</tr>" +
-//      "<tr>" + "<td>" + gschoolDogs['dogs'][2]['owner'] + "</td>"
-//      + "<td>" + gschoolDogs['dogs'][2]['name'] + "</td>" + "<td>" + gschoolDogs['dogs'][2]['preferences'][0]['favoriteFood'] + "</td>" +
-//      "<td>" + gschoolDogs['dogs'][2]['preferences'][1]['favoriteToy'] + "</td>" + "</tr>"
-//  )
 
 });
 
