@@ -44,6 +44,21 @@ $(document).ready(function () {
       }
     ]
   };
-  // Write come code to add the dogs to the table !!!!
+
+  var addDogs = function() {
+    $('.dogs').append("<tr>" + "<td>" + gschoolDogs['dogs'][0]['owner'] + "</td>"
+      + "<td>" + gschoolDogs['dogs'][0]['name'] + "</td>" + "<td>" + gschoolDogs['dogs'][0]['preferences'][0]['favoriteFood'] + "</td>" +
+        "<td>" + gschoolDogs['dogs'][0]['preferences'][1]['favoriteToy'] + "</td>" + "</tr>" +
+        "<tr>" + "<td>" + gschoolDogs['dogs'][1]['owner'] + "</td>"
+        + "<td>" + gschoolDogs['dogs'][1]['name'] + "</td>" + "<td>" + gschoolDogs['dogs'][1]['preferences'][0]['favoriteFood'] + "</td>" +
+        "<td>" + gschoolDogs['dogs'][1]['preferences'][1]['favoriteToy'] + "</td>" + "</tr>" +
+        "<tr>" + "<td>" + gschoolDogs['dogs'][2]['owner'] + "</td>"
+        + "<td>" + gschoolDogs['dogs'][2]['name'] + "</td>" + "<td>" + gschoolDogs['dogs'][2]['preferences'][0]['favoriteFood'] + "</td>" +
+        "<td>" + gschoolDogs['dogs'][2]['preferences'][1]['favoriteToy'] + "</td>" + "</tr>"
+    )
+  };
+
+  addDogs();
+
 });
 
